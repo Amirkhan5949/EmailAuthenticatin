@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.firebaseauthentication.phoneauth.loginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class DashboardActivity extends AppCompatActivity {
@@ -25,7 +26,7 @@ public class DashboardActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(DashboardActivity.this,emailRegistrationActivity.class));
+                finish();
             }
         });
 
@@ -35,7 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(DashboardActivity.this,loginActivity.class));
+                startActivity(new Intent(DashboardActivity.this, loginActivity.class));
                 finish();
 
             }

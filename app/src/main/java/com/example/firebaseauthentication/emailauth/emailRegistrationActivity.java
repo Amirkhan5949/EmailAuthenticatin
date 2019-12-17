@@ -1,4 +1,4 @@
-package com.example.firebaseauthentication;
+package com.example.firebaseauthentication.emailauth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,13 +14,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.firebaseauthentication.DashboardActivity;
+import com.example.firebaseauthentication.R;
+import com.example.firebaseauthentication.phoneauth.loginActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -47,7 +48,7 @@ public class emailRegistrationActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(emailRegistrationActivity.this,loginActivity.class));
+                startActivity(new Intent(emailRegistrationActivity.this, loginActivity.class));
 
             }
         });
@@ -94,7 +95,7 @@ public class emailRegistrationActivity extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                         Toast.makeText(emailRegistrationActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(emailRegistrationActivity.this,DashboardActivity.class));
+                                        startActivity(new Intent(emailRegistrationActivity.this, DashboardActivity.class));
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {

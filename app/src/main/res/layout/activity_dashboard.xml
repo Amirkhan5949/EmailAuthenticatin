@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".emailRegistrationActivity">
+    tools:context=".emailauth.emailRegistrationActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:scaleType="centerCrop"/>
 
     <LinearLayout
-        android:background="#7E000000"
+        android:background="@color/login_background"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
